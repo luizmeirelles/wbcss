@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename');;
 
-var scssFiles = ['./scss/*.scss'] ;
+var scssFiles = ['./scss/wooble_css.scss'] ;
 var cssDest = './css/';
 
 var sassDeveloperOptions = {

@@ -1,0 +1,14 @@
+$max: 100;
+$step: 5;
+$valorfull: 1920;
+
+@for $i from 10 through ceil($max/$step) {
+  $value: ($i - 1)*$step + 5;
+  .wb-col-#{$value} {
+    width: round(percentage($value/100));
+    max-width: #{($valorfull*$value)/100}px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+  }
+}
