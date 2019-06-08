@@ -167,3 +167,127 @@ p, h1, h2, h3, h4, h5, h6, span {
   position: relative;
   display: flex;
 }
+
+.wb-container-mb-50 {
+  width: 50%;
+  min-width: 160px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-55 {
+  width: 55%;
+  min-width: 176px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-60 {
+  width: 60%;
+  min-width: 192px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-65 {
+  width: 65%;
+  min-width: 208px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-70 {
+  width: 70%;
+  min-width: 224px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-75 {
+  width: 75%;
+  min-width: 240px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-80 {
+  width: 80%;
+  min-width: 256px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-85 {
+  width: 85%;
+  min-width: 272px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-90 {
+  width: 90%;
+  min-width: 288px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-95 {
+  width: 95%;
+  min-width: 304px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.wb-container-mb-100 {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .wb-container-mb-50 {
+    max-width: 384px;
+  }
+  .wb-container-mb-55 {
+    max-width: 422.4px;
+  }
+  .wb-container-mb-60 {
+    max-width: 460.8px;
+  }
+  .wb-container-mb-65 {
+    max-width: 499.2px;
+  }
+  .wb-container-mb-70 {
+    max-width: 537.6px;
+  }
+  .wb-container-mb-75 {
+    max-width: 576px;
+  }
+  .wb-container-mb-80 {
+    max-width: 614.4px;
+  }
+  .wb-container-mb-85 {
+    max-width: 652.8px;
+  }
+  .wb-container-mb-90 {
+    max-width: 691.2px;
+  }
+  .wb-container-mb-95 {
+    max-width: 729.6px;
+  }
+  .wb-container-mb-100 {
+    max-width: 768px;
+  }
+}

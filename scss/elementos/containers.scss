@@ -1,3 +1,4 @@
+/* region CONTAINER DESKTOP RESOLUÇÃO 1920px DE 50% Á 100% */
 $max: 100;
 $step: 5;
 $valorfull: 1920;
@@ -12,3 +13,32 @@ $valorfull: 1920;
     display: flex;
   }
 }
+
+/* endregion */
+
+/* region CONTAINER MOBILE RESOLUÇÃO 320px DE 50% Á 100% */
+$max_mb: 100;
+$step_mb: 5;
+$valor_full_mb: 320;
+
+@for $i from 10 through ceil($max_mb/$step_mb) {
+  $value: ($i - 1)*$step + 5;
+  .wb-container-mb-#{$value} {
+    width: round(percentage($value/100));
+    min-width: #{($valor_full_mb*$value)/100}px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  $valor_tablet_mb: 768;
+  @for $i from 10 through ceil($max_mb/$step_mb) {
+    $value: ($i - 1)*$step + 5;
+    .wb-container-mb-#{$value} {
+      max-width: #{($valor_tablet_mb*$value)/100}px;
+    }
+  }
+}
+/* endregion */
