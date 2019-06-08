@@ -1,6 +1,5 @@
 @import '_padrao';
 @import '_reset';
-@import '_variables';
 
 /* region CONTAINERS DESKTOP */
 
@@ -10,6 +9,7 @@
   position: relative;
   display: flex;
 }
+
 
 .wb-container-100 {
   width: 100%;
@@ -199,30 +199,6 @@
 
   &.wb-icone {
 
-  }
-
-  &[data-fonte="w001"] {
-    @include fontfamily($fonte_avenir_next_bold);
-  }
-
-  &[data-fonte="w002"] {
-    @include fontfamily($fonte_gobold_bold);
-  }
-
-  &[data-fonte="w003"] {
-    @include fontfamily($fonte_gotham_narrow_black);
-  }
-
-  &[data-fonte="w004"] {
-    @include fontfamily($fonte_museo_500_regular);
-  }
-
-  &[data-fonte="w005"] {
-    @include fontfamily($fonte_roboto_bold);
-  }
-
-  &:hover {
-    @include transition();
   }
 
   &:focus {

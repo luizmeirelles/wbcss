@@ -2,8 +2,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename');;
 
-var scssFiles = ['./assets/scss/*.scss'] ;
-var cssDest = './assets/css/site';
+var scssFiles = ['./scss/*.scss'] ;
+var cssDest = './css/';
 
 var sassDeveloperOptions = {
     outputStyle: 'expanded'
@@ -22,7 +22,7 @@ gulp.task('sassdev', function(){
 gulp.task('sassprod', function(){
     return gulp.src(scssFiles)
     .pipe(sass(sassProductionOptions).on('error', sass.logError))
-    .pipe(rename('estilo.min.css'))
+    .pipe(rename('wooble_css.min.css'))
     .pipe(gulp.dest(cssDest));
 });
     
@@ -47,7 +47,6 @@ gulp.task('watch', function(){
 
 gulp.task('watch', function(){
     gulp.watch(scssFiles, ['sassdev', 'sassprod']);
-    //gulp.watch(jsFiles, [' scriptsdev']);
 });
 
 gulp.task('default', ['sassdev', 'sassprod', 'watch']); 
