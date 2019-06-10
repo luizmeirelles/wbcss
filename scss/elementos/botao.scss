@@ -1,0 +1,114 @@
+@import "../utilitarios/_variaveis";
+
+$background-cor: $branco;
+$borda-cor: $cinza;
+$texto-cor: $preto;
+
+/* region WOOBLE BOTAO */
+.wb-btn {
+  padding: 13px 45px;
+  display: inline-block;
+  @include fontsize(16);
+  background-color: $background-cor;
+  color: $texto-cor;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  @include transition();
+
+  &.wb-pequeno {
+    padding: 11px 40px;
+    @include fontsize(12);
+  }
+
+  &.wb-medio {
+    padding: 13px 45px;
+    @include fontsize(16);
+  }
+
+  &.wb-grande {
+    padding: 15px 50px;
+    @include fontsize(20);
+  }
+
+  &.wb-extra {
+    padding: 17px 55px;
+    @include fontsize(24);
+  }
+
+  &.wb-bloco {
+    width: 100%;
+  }
+
+  &.wb-redondo {
+    @include radius(40px);
+  }
+
+  &.wb-contorno {
+    border: 1px solid;
+    border-color: $borda-cor;
+  }
+
+  &.wb-circulo {
+    padding: 8px;
+    //display: flex;
+    ///justify-content: center;
+    //align-items: center;
+    border-radius: 50%;
+
+    svg{
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &.wb-carregando {
+    position: relative;
+    color: transparent !important;
+
+    &:before {
+      content: '';
+      height: 14px;
+      width: 14px;
+      animation: rotate 0.6s infinite linear;
+      border: 2px solid $branco;
+      border-right-color: transparent;
+      border-radius: 50%;
+      position: absolute;
+      left: calc(50% - 8px);
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  &.wb-icone {
+
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .8;
+  }
+
+  &:hover {
+    @include transition();
+    background-color: $texto-cor;
+    color: $background-cor;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+/* endregion */
