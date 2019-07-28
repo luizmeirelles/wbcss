@@ -10,7 +10,6 @@ $valorfull: 1920;
     max-width: #{($valorfull*$value)/100}px;
     margin: 0 auto;
     position: relative;
-    display: flex;
   }
 }
 
@@ -18,7 +17,6 @@ $valorfull: 1920;
   width: 100%;
   margin: 0 auto;
   position: relative;
-  display: flex;
 }
 /* endregion */
 
@@ -34,7 +32,6 @@ $valor_full_mb: 320;
     min-width: #{($valor_full_mb*$value)/100}px;
     margin: 0 auto;
     position: relative;
-    display: flex;
   }
 }
 
@@ -42,7 +39,6 @@ $valor_full_mb: 320;
   width: 100%;
   margin: 0 auto;
   position: relative;
-  display: flex;
 }
 
 @media (min-width: 768px) {
