@@ -1,0 +1,51 @@
+/* region WOOBLE COLUNA: 20 COLUNAS POR PORCENTAGEM (5%, 10%, 15% ... 100%) */
+$max: 100;
+$step: 5;
+@for $i from 1 through ceil($max/$step) {
+  $value: ($i - 1)*$step + 5;
+  .wb-col-#{$value} {
+    width: round(percentage($value/100));
+    align-content: stretch;
+  }
+}
+
+/* endregion */
+
+/* region WOOBLE COLUNA: SISTEMA DE 12 */
+$max_12: 100.0;
+$step_12: 8.333333;
+@for $i from 1 through ceil($max_12/$step_12) {
+  $value: ($i - 1)*$step_12 + 8.333333;
+  .wb-doze-#{$i} {
+    width: percentage($value/100);
+    float: left;
+  }
+}
+
+/* endregion */
+
+/* region WOOBLE COLUNA: ESQUERDA, DIREITA E COMPLEMENTO */
+
+.wb-esquerda, .wb-direita {
+  //flex: 1;
+  align-content: stretch;
+}
+
+.wb-col {
+  flex: 1;
+  align-content: stretch;
+}
+
+/* endregion */
+
+/* region WOOBLE COLUNA: SISTEMA DE 14 */
+$max_14: 100.0;
+$step_14: 7.142857142857143;
+@for $i from 1 through ceil($max_14/$step_14) {
+  $value: ($i - 1)*$step_14 + 7.142857142857143;
+  .wb-quatorze-#{$i} {
+    width: percentage($value/100);
+    float: left;
+  }
+}
+/* endregion */

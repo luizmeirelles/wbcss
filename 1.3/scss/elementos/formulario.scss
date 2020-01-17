@@ -1,0 +1,142 @@
+@import "../utilitarios/_variaveis";
+
+.wb-formulario {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .wb-campos {
+    position: relative;
+    margin-bottom: 10px;
+
+    label {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+     // @include fontsize($size-6);
+      margin-bottom: 5px;
+      color: $dark-1;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px 12px;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+     // @include fontsize($size-6);
+      background-color: $branco;
+      color: $dark-3;
+      border: 1px solid;
+      border-color: $dark-1;
+      @include radius(5px);
+      margin-top: 5px;
+      outline: none;
+    }
+
+    option {
+      color: $preto;
+    }
+
+    &.wb-flutuante {
+      margin-bottom: 20px;
+
+      input, select, textarea {
+        padding: 8px 0;
+        margin-top: 0;
+        background-color: transparent;
+        @include radius(0);
+        border: none;
+        border-bottom: 1px solid;
+      }
+
+      label {
+        position: absolute;
+        font-size: $size-7;
+        top: -5px;
+        left: 0;
+        @include transition();
+        opacity: 0;
+        margin-bottom: 0;
+      }
+
+      input:required:valid ~ label,
+      select:required:valid ~ label,
+      textarea:required:valid ~ label {
+        opacity: 1;
+        top: -12px;
+        @include transition();
+      }
+
+      /*input:focus,
+      select:focus,
+      textarea:focus{
+        border-bottom-color: #1E90FF;
+      }*/
+    }
+
+    &.wb-placeholder {
+      margin-bottom: 20px;
+
+      label {
+        position: absolute;
+         font-size: $size-7;
+        top: -5px;
+        left: 0;
+        @include transition();
+        opacity: 0;
+        margin-bottom: 0;
+      }
+
+      input:required:valid ~ label,
+      select:required:valid ~ label,
+      textarea:required:valid ~ label {
+        opacity: 1;
+        top: -12px;
+        @include transition();
+      }
+    }
+
+    &.wb-borda{
+      input, select, textarea {
+        padding: 8px 0;
+        margin-top: 0;
+        background-color: transparent;
+        @include radius(0);
+        border: none;
+        border-bottom: 1px solid;
+      }
+    }
+
+    .wb-mensagem {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+       font-size: $size-7;
+      color: $perigo;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .wb-formulario {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .wb-campos {
+
+      label, input, select, textarea {
+        @include fontsize(14);
+      }
+
+      &.wb-flutuante, &.wb-placeholder {
+        margin-bottom: 15px;
+      }
+
+      &.wb-placeholder{
+        label {
+          @include fontsize(10);
+        }
+
+        input:required:valid ~ label,
+        select:required:valid ~ label,
+        textarea:required:valid ~ label {
+          top: -10px;
+        }
+      }
+    }
+  }
+}

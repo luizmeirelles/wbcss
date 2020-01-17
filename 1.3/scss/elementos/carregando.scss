@@ -1,0 +1,111 @@
+@import "../utilitarios/_variaveis";
+
+.wb-spinner {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: block;
+
+  &:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    animation: rotate 0.6s infinite linear;
+    border: 4px solid $dark-2;
+    border-right-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 8px);
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.wb-spinner-2 {
+  position: relative;
+
+  span {
+    display: block;
+    height: 10px;
+    width: 10px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+
+    &:nth-child(1) {
+      left: -20px;
+      animation: bounce 1s ease-in-out infinite;
+    }
+
+    &:nth-child(2) {
+      animation: bounce 1s ease-in-out 0.33s infinite;
+    }
+
+    &:nth-child(3) {
+      left: 20px;
+      animation: bounce 1s ease-in-out 0.66s infinite;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 75%, 100% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+.wb-spinner-3 {
+  width: 35px;
+  height: 35px;
+  border: 4px solid rgba(255, 255, 255, .2);
+  border-left-color: #FFFFFF;
+  border-radius: 100%;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.load_bar {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+
+  .h-load-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, .2);
+    overflow: hidden;
+
+    .load-step {
+      width: 20%;
+      height: 100%;
+      background: #FFF;
+      position: relative;
+      animation: step-load 2s linear infinite;
+    }
+  }
+
+  @keyframes step-load {
+    0% {
+      left: -30px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}

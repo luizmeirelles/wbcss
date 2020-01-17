@@ -1,0 +1,76 @@
+/* region WOOBLE CONTAINER: 1920PX PROPORCIONAL (100%, 95%, 90% ... 50%) */
+$max: 100;
+$step: 5;
+$valorfull: 1920;
+
+@for $i from 10 through ceil($max/$step) {
+  $value: ($i - 1)*$step + 5;
+  .wb-container-#{$value} {
+    width: round(percentage($value/100));
+    max-width: #{($valorfull*$value)/100}px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+  }
+}
+
+.wb-container-full {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+/* endregion */
+
+/* region WOOBLE CONTAINER: 320PX PROPORCIONAL (100%, 95%, 90% ... 50%)*/
+$max_mb: 100;
+$step_mb: 5;
+$valor_full_mb: 320;
+
+@for $i from 10 through ceil($max_mb/$step_mb) {
+  $value: ($i - 1)*$step + 5;
+  .wb-container-mb-#{$value} {
+    width: round(percentage($value/100));
+    min-width: #{($valor_full_mb*$value)/100}px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+  }
+}
+
+.wb-container-mb-full {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  $valor_tablet: 768;
+  @for $i from 10 through ceil($max_mb/$step_mb) {
+    $value: ($i - 1)*$step + 5;
+    .wb-container-mb-#{$value} {
+      max-width: #{($valor_tablet*$value)/100}px;
+    }
+  }
+}
+/* endregion */
+
+/* region WOOBLE CONTAINER: PROPORCIONAL A 14 COLUNAS*/
+
+$max: 100;
+$valorfull: 1920;
+$step: 7.142857142857143;
+
+@for $i from 10 through ceil($max/$step) {
+  $value: ($i - 1)*$step + 7.142857142857143;
+  .wb-container-coluna-#{$i} {
+    width: round(percentage($value/100));
+    max-width: #{($valorfull*$value)/100}px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+  }
+}
+
+/* endregion */

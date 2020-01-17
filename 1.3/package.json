@@ -1,0 +1,11 @@
+{
+  "name": "curso",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
