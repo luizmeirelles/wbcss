@@ -765,6 +765,7 @@
   color: transparent !important;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .wb-btn.wb-loading:before {
