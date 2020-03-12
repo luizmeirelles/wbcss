@@ -1378,7 +1378,7 @@ fieldset[disabled] .wb-btn {
 
 .wb-formulario .wb-campos.wb-flutuante label {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 0.75rem;
   top: -5px;
   left: 0;
   transition: 0.3s;
@@ -1408,7 +1408,7 @@ fieldset[disabled] .wb-btn {
 
 .wb-formulario .wb-campos.wb-placeholder label {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 0.75rem;
   top: -5px;
   left: 0;
   transition: 0.3s;
@@ -1454,16 +1454,8 @@ fieldset[disabled] .wb-btn {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .wb-formulario .wb-campos label, .wb-formulario .wb-campos input, .wb-formulario .wb-campos select, .wb-formulario .wb-campos textarea {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
   .wb-formulario .wb-campos.wb-flutuante, .wb-formulario .wb-campos.wb-placeholder {
     margin-bottom: 15px;
-  }
-  .wb-formulario .wb-campos.wb-placeholder label {
-    font-size: 10px;
-    font-size: 0.625rem;
   }
   .wb-formulario .wb-campos.wb-placeholder input:required:valid ~ label,
   .wb-formulario .wb-campos.wb-placeholder select:required:valid ~ label,

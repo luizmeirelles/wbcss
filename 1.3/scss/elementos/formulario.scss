@@ -47,7 +47,7 @@
 
       label {
         position: absolute;
-        font-size: $size-7;
+        font-size: $size-2;
         top: -5px;
         left: 0;
         @include transition();
@@ -75,7 +75,7 @@
 
       label {
         position: absolute;
-         font-size: $size-7;
+        font-size: $size-2;
         top: -5px;
         left: 0;
         @include transition();
@@ -119,7 +119,7 @@
     .wb-campos {
 
       label, input, select, textarea {
-        @include fontsize(14);
+       // @include fontsize(14);
       }
 
       &.wb-flutuante, &.wb-placeholder {
@@ -128,7 +128,7 @@
 
       &.wb-placeholder{
         label {
-          @include fontsize(10);
+       //   @include fontsize(10);
         }
 
         input:required:valid ~ label,
